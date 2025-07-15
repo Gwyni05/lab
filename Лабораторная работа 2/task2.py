@@ -4,8 +4,12 @@ months = 10  # Количество месяцев, которое планир�
 increase = 0.03  # Ежемесячный рост цен
 money_capital = 0
 
-for i in range(0,10):
+for i in range(months):
     money_capital += spend-salary
     spend += spend * increase
 
-print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов:", round(money_capital))
+if money_capital % 1 != 0:                     # также можно использовать math.ceil, money_capital = math.ceil(money_capital)
+    money_capital += 1 - (money_capital % 1)   
+
+print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов:", round(money_capital,None))
+print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов:", int(money_capital))
