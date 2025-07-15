@@ -12,5 +12,4 @@ for i in range(months):
 if money_capital % 1 != 0:                     # также можно использовать math.ceil, money_capital = math.ceil(money_capital)
     money_capital += 1 - (money_capital % 1)   
 
-print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов:", round(money_capital,None))
 print(f"Подушка безопасности, чтобы протянуть {months} месяцев без долгов:", int(money_capital))
